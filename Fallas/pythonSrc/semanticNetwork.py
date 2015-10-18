@@ -1,4 +1,7 @@
 from relation import Relation
+from action import Action
+from category import Category
+from attribute import Attribute
 
 class SemanticNetwork(object):
     def __init__(self):
@@ -13,7 +16,17 @@ class SemanticNetwork(object):
 		self.relations[item1].append(Relation(item2, relation))
     
 	def belongs(self,action,category):
-		link(semantickNetwork,action,category,"belongs")
+		link(self,action,category,"belongs")
+		action.setCategory(category)
+		
 	
 	def hasAttribute(self,category,attribute):
-		link(semantickNetwork,category,attribute,"hasAttribute")
+		link(self,category,attribute,"has attribute")
+		category.setAttribute(attribute)	
+		
+		
+	def isAn(self,item1,item2):
+		link(item1,item2,"is an")
+		
+	def isA(self,item1,item2):
+		link(item1,item2,"is a")
