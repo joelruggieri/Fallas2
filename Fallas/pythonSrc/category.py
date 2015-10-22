@@ -8,11 +8,14 @@ class Category:
 
     
    
-   def setAttribute(self,attribute):
-	   self.attributes.append(attribute)
+	def setAttribute(self,attribute):
+		self.attributes.append(attribute)
    
-   def getAttibutes(self):
-        return self.attributes
+	def getAttibutes(self):
+		return self.attributes
+		
+	def getName(self):
+		return self.name
         
 
         

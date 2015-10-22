@@ -15,16 +15,19 @@ class Action:
 			name = attribute.getName()
 			anAtttribute = Attribute(name,"N")
 			self.attributes.append(anAttribute)
+			
+	def getName(self):
+		return self.name
     
    
-   def setDesicion(self,decision):
-        self.decision = desicion
+	def setDesicion(self,decision):
+		self.decision = desicion
         
 	def defineValueForAttribute(self,attribute,value):
 		for attribute in self.attributes:
 			name = attribute.getName()
 			if name == attribute:
-			attribute.setValue(value)
+				attribute.setValue(value)
         
        
 	
