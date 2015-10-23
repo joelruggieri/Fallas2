@@ -1,4 +1,5 @@
 from rule import Rule
+from interfaz import Interfaz
 
 def remove_values_from_list(the_list, val):
    return [value for value in the_list if value != val]
@@ -85,12 +86,12 @@ def chargeRules():
 
 	return rules
 
+
+
 rules = chargeRules()
 
-# for x in rules:
-# 	print x.name + " -------> " + x.apply()	
-
-knowledge = ["VF", "VF", "VF", "VF", "VF", "VF"]
+knowledge = Interfaz([12, 15, 19, 14, 12.5, 13.6, 0.5]).translate()
+#knowledge = ["VF", "VF", "VF", "VF", "VF", "VF"]
 finalKnowledge = backwardChaining(knowledge, rules, "VF")
 print "RESULT "
 print finalKnowledge
